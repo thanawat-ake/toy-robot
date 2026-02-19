@@ -7,6 +7,7 @@ public final class Robot {
     private Direction direction;
 
     public boolean isPlaced() {
+        // To check the robot is placed yet
         return position != null && direction != null;
     }
 

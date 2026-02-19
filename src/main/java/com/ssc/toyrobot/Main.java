@@ -14,14 +14,14 @@ public class Main {
             boolean hasValidPlace = false;
 
             while ((line = br.readLine()) != null) {
-                var cmdOpt = commandParser.parse(line);
+                var commandOpt = commandParser.parse(line);
 
-                if (cmdOpt.isEmpty()) {
+                if (commandOpt.isEmpty()) {
                     continue;
                 }
-                Command command = cmdOpt.get();
+                Command command = commandOpt.get();
 
-                // discard everything until a valid PLACE is executed
+                // discard all commands until a valid PLACE command
                 if (!hasValidPlace) {
                     if (command instanceof Commands.Place place) {
                         simulator.execute(command);

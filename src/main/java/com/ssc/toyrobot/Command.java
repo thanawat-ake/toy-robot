@@ -1,5 +1,5 @@
 package com.ssc.toyrobot;
 
-public sealed interface Command permits Commands.Left, Commands.Move, Commands.Place, Commands.Report, Commands.Right {
+public interface Command {
     void apply(Simulator simulator);
 }

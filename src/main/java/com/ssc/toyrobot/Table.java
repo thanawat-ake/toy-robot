@@ -13,6 +13,7 @@ public final class Table {
     }
 
     public boolean isValid(Position p) {
+        // Prevent the robot falling from the table
         return p.x() >= 0 && p.y() >= 0 && p.x() < width && p.y() < height;
     }
 }

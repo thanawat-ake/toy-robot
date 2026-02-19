@@ -52,10 +52,9 @@ public final class Simulator {
     }
 
     public void report() {
-        robot.report().ifPresent(out::println);
+        robot.report().ifPresent(s -> out.println(s));
     }
 
-    // helpful for tests
     public String reportStringOrNull() {
         return robot.report().orElse(null);
     }
