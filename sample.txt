@@ -1,0 +1,26 @@
+# Test 1 (Example A)
+PLACE 0,0,NORTH
+MOVE
+REPORT
+
+# Test 2 (Example B)
+PLACE 0,0,NORTH
+LEFT
+REPORT
+
+# Test 3 (Example C)
+PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+
+# Ignore falling off
+PLACE 0,0,SOUTH
+MOVE
+REPORT
+
+# Invalid place
+PLACE 9,9,NORTH
+REPORT
